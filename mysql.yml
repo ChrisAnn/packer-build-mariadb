@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  collections:
+    - devsec.hardening
+  vars:
+    ssh_use_pam: true # to allow access with our key on ec2
+  pre_tasks:
+    - name: Install python MySQL module
+      apt:
+        name: python3-mysqldb
+  roles:
+    - geerlingguy.mysql
+    - devsec.hardening.mysql_hardening

@@ -1,0 +1,7 @@
+- src: geerlingguy.mysql
+- src: dev-sec.os-hardening
+- src: dev-sec.ssh-hardening
+
+  collections:
+    - devsec.hardening
+    - community.mysql
