@@ -5,7 +5,8 @@ ansiColor('xterm') {
             checkout scm
         }
         stage('Setup') {
-            sh "ansible-galaxy install -r requirements.yml"
+            sh "ansible-galaxy role install -r requirements.yml"
+            sh "ansible-galaxy collection install -r requirements.yml"
         }
         stage('Validate') {
             sh "packer validate mysql.json"
