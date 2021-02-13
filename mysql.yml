@@ -3,8 +3,6 @@
   become: true
   collections:
     - devsec.hardening
-  vars:
-    ssh_use_pam: true # to allow access with our key on ec2
   roles:
     - geerlingguy.mysql
     - devsec.hardening.mysql_hardening
