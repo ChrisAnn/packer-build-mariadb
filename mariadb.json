@@ -20,11 +20,11 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "mysql-{{timestamp}}"
+    "ami_name": "mariadb-{{timestamp}}"
   }],
   "provisioners": [{
     "type": "ansible",
-    "playbook_file": "mysql.yml"
+    "playbook_file": "mariadb.yml"
   }],
   "post-processors": [{
     "output": "manifest.json",
