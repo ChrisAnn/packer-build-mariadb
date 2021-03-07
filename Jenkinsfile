@@ -15,7 +15,7 @@ ansiColor('xterm') {
         stage('Build') {
             withCredentials([usernamePassword(credentialsId: 'aws_access_keys', usernameVariable: 'AWS_ACCESS_KEY', passwordVariable: 'AWS_SECRET_KEY')]) {
             // Run the packer build
-            sh "packer build mariadb.json"
+            sh "packer build -var 'aws_region=us-west-2' mariadb.json"
             }
         }
         stage('Store Artifacts') {
