@@ -1,6 +1,2 @@
-roles:
-  - geerlingguy.mysql
-
-collections:
-  - devsec.hardening
-  - community.mysql
+- src: geerlingguy.mysql
+- src: geerlingguy.pip
