@@ -1,5 +1,5 @@
 def test_mariadb_is_installed(host):
-    mariadb = host.package("mariadb")
+    mariadb = host.package("mariadb-server")
     assert mariadb.is_installed
 
 def test_mariadb_running_and_enabled(host):
