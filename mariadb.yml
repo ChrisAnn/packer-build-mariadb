@@ -7,9 +7,6 @@
       - mariadb-client
       - mariadb-server
       - python-mysqldb
-    pip_install_packages:
-      - name: pytest
-      - name: pytest-testinfra
 
   pre_tasks:
     - name: Update apt cache
@@ -17,4 +14,3 @@
 
   roles:
     - geerlingguy.mysql
-    - geerlingguy.pip
